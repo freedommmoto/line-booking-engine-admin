@@ -13,6 +13,7 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
+    .copy('resources/static/images', 'public/images')
     .styles(['resources/css/style.css'], 'public/css/style.css');
 
 mix.browserSync('line-be.com/dashboard');
