@@ -16,8 +16,11 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
+Route::get('/roomtype', 'HomeController@dashboard')->name('dashboard');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/api/roomtype', 'RoomtypeController@index')->name('home');
 

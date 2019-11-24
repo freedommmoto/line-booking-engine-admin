@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import ExampleComponent from '../components/ExampleComponent';
+import Full from '../Full.vue'
+
 import DashboardComponent from '../components/DashboardComponent';
+import RoomtypeComponent from '../components/RoomtypeComponent';
 
 Vue.use(Router)
 
@@ -14,12 +16,21 @@ export default new Router({
             path: '/',
             redirect: '/dashboard',
             name: 'Home',
-            component: DashboardComponent,
+            component: Full,
             children: [
                 {
                     path: 'dashboard',
                     name: 'Dashboard',
                     component: DashboardComponent,
+                    meta: {
+                        permission: 'public',
+                        fail: '/error-public'
+                    }
+                },
+                {
+                    path: 'roomtype',
+                    name: 'RoomType',
+                    component: RoomtypeComponent,
                     meta: {
                         permission: 'public',
                         fail: '/error-public'

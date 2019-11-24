@@ -818,7 +818,6 @@
         },
         mounted() {
             this.loadChart()
-            console.log('Component mounted.')
         }
     }
 </script>
