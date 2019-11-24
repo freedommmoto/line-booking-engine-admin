@@ -36,3 +36,22 @@
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 }
+
+
+/* edit style after load Template */
+.header .header-container {
+    margin-top: 20px;
+}
+
+.header .header-container{
+    height: 45px ;
+}
+.header .header-container .nav-left > li > a, .header .header-container .nav-right > li > a{
+    min-height: auto;
+}
+.header .header-container .nav-left .notifications .dropdown-menu, .header .header-container .nav-right .notifications .dropdown-menu{
+    margin-top: 25px;
+}
+.header .search-input input {
+    margin-top: -12px;
+}
