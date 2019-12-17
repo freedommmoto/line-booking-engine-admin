@@ -6,10 +6,13 @@
 
 import App from './App.vue'
 import router from './router'
+import BootstrapVue from 'bootstrap-vue'
+
 
 require('./bootstrap');
 
 window.Vue = require('vue');
+Vue.use(BootstrapVue)
 
 /**
  * The following block of code may be used to automatically register your

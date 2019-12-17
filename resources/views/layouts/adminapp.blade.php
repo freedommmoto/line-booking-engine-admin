@@ -1,16 +1,16 @@
 <html>
 <head>
-    <title>App Name - @yield('title')</title>
+    <title>Line Booking Engine Admin @yield('title')</title>
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
     <link href="{{ mix('/css/style.css') }}" rel="stylesheet">
 </head>
 <body class="app">
 
-@extends('layouts.sidebar')
+@include('layouts.sidebar')
 
 <div class="page-container">
 
-    @extends('layouts.header')
+    @include('layouts.header')
 
     @yield('content')
 
