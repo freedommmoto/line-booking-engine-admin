@@ -11,15 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
-Route::get('/roomtype', 'HomeController@dashboard')->name('dashboard');
+Route::get('/', 'AwardController@award')->name('award');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/api/roomtype', 'RoomtypeController@index')->name('home');
 
