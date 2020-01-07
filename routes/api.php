@@ -16,3 +16,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/products', 'ProductController@getMockData')->name('products.get_all');
+
+Route::get('/order/insert', 'OrderController@new')->name('order.insert');
