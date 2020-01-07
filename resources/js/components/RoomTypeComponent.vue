@@ -29,11 +29,15 @@
                     </b-card>
                 </template>
             </b-table>
+
+            <pre>{{roomType}}</pre>
         </div>
     </main>
 </template>
 
 <script>
+    import axios from 'axios';
+
     export default {
         data() {
             return {
@@ -49,8 +53,19 @@
                         _showDetails: true
                     },
                     {isActive: true, age: 38, first_name: 'Jami', last_name: 'Carney'}
-                ]
+                ],
+                roomType: {}
             }
+        },
+        methods: {
+            async loadRoomTypeData() {
+                const response = await axios.get('/api/roomtype', {}, {})
+                this.roomType = response.data;
+                // this.user = response.data.user;
+            }
+        },
+        mounted() {
+            this.loadRoomTypeData()
         }
     }
 </script>
